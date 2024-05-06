@@ -27,15 +27,27 @@ def Atributos():
     print(RS)
     pyperclip.copy(RS)
 
+
+def ProsContras():
+    R = Cámara.get()
+    RS = f"Actua como un experto en fotografia. Dime los pros y los contras de la cámara" + R + ", pero haz unos pros y contras que demuestren tanto lo bueno como lo malo de la cámara."
+    print(RS)
+    pyperclip.copy(RS)
+
 #Fuentes
 FuenteTitulo = Font(family = "Montserrat", size = 27, weight = "bold")
+FuenteContexto = Font(family = "Montserrat", size = 9, weight = "bold")
 FuenteBotón = Font(family = "Montserrat", size = 16, weight = "bold")
 FuenteCámara = Font(family = "Montserrat", size = 10, weight = "bold")
 FuenteTexto = Font(family = "Montserrat", size = 15, weight = "bold")
 
 #Titulo
 Titulo = tk.Label(ventana, font=FuenteTitulo, text="Automatizador de prompts", background = Fondo)
-Titulo.place(x=70, y=50)
+Titulo.place(x=70, y=30)
+
+#Contexto
+Contexto = tk.Label(ventana, text="Pequeño programa para accelerar mis prompts para mi pagina web", font = FuenteContexto, background=Fondo)
+Contexto.place(x = 120, y = 83)
 
 #Entrada para poner la cámara
 Cámara = tk.Entry(ventana, width = 30, font = FuenteCámara)
@@ -49,7 +61,7 @@ CámaraTitulo.place(x = 250, y = 115)
 CatacteristicasBotón = tk.Button(ventana, text = "Caracteristicas", background = "blue", width = 20, height = 3, font= FuenteBotón, command= Características)
 CatacteristicasBotón.place(x = 150, y = 200)
 
-AtributosBotón = tk.Button(ventana, text = "Atributos", background = "pink", width = 20, height = 3, font= FuenteBotón, command= Características)
+AtributosBotón = tk.Button(ventana, text = "Atributos", background = "pink", width = 20, height = 3, font= FuenteBotón, command= Atributos)
 AtributosBotón.place(x = 150, y = 320)
 
 ProsContrasBotón = tk.Button(ventana, text = "Pros/contras", background = "yellow", width = 20, height = 3, font= FuenteBotón, command= Características)
