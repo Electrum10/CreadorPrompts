@@ -16,7 +16,7 @@ ventana.configure(background = Fondo)
 #Función para el botón de características
 def Características():
     R = Cámara.get()
-    RR = f"Actua como un experto en fotografia. Dime la Resolució/ISO, el Sensor, el Estabilitzador, el Video, la Conectivitat, el Visor, las dimensiones i Peso, la Bateria i la Resistencia de la cámara " + R
+    RR = f"Actua como un experto en fotografia. Dime la Resolució/ISO, el Sensor, els punts d'enfocament, el Estabilitzador, el Video, la Conectivitat, el Visor, las dimensiones i Peso, la Bateria i la Resistencia de la cámara " + R
     print(RR)
     pyperclip.copy(RR)
 
@@ -64,7 +64,7 @@ CatacteristicasBotón.place(x = 150, y = 200)
 AtributosBotón = tk.Button(ventana, text = "Atributos", background = "pink", width = 20, height = 3, font= FuenteBotón, command= Atributos)
 AtributosBotón.place(x = 150, y = 320)
 
-ProsContrasBotón = tk.Button(ventana, text = "Pros/contras", background = "yellow", width = 20, height = 3, font= FuenteBotón, command= Características)
+ProsContrasBotón = tk.Button(ventana, text = "Pros/contras", background = "yellow", width = 20, height = 3, font= FuenteBotón, command= ProsContras)
 ProsContrasBotón.place(x = 150, y = 450)
 
 
