@@ -16,21 +16,21 @@ ventana.configure(background = Fondo)
 #Función para el botón de características
 def Características():
     R = Cámara.get()
-    RR = f"Actúa como un experto en fotografía. Dime la Resolución/ISO, el Sensor, los puntos d'enfoque, el estabilizador, el Video, la conectividad, el Visor, las dimensiones i Peso, la Batería (mAh) i la Resistencia de la cámara " + R
+    RR = f"Actúa como un experto en fotografía. Dime la Resolución/ISO, el Sensor, los puntos d'enfoque, el estabilizador, el Video, la conectividad, el Visor, las dimensiones i Peso, la Batería (mAh) i la Resistencia de la cámara. Español" + R
     print(RR)
     pyperclip.copy(RR)
 
 #Función para el botón de atributos
 def Atributos():
     R = Cámara.get()
-    RS = f"Actúa como un experto en fotografía. Dime los siguientes atributos de la cámara " + R + ": Precio, Empuñadura, Facilidad de uso i portabilidad"
+    RS = f"Actúa como un experto en fotografía. Dime los siguientes atributos de la cámara " + R + ": Precio, Empuñadura, Facilidad de uso i portabilidad. Español"
     print(RS)
     pyperclip.copy(RS)
 
 
 def ProsContras():
     R = Cámara.get()
-    RS = f"Actúa como un experto en fotografía. Dime los pros y los contras de la cámara" + R + ", pero haz unos pros y contras que demuestren tanto lo bueno como lo malo de la cámara."
+    RS = f"Actúa como un experto en fotografía. Dime los pros y los contras de la cámara" + R + ", pero haz unos pros y contras que demuestren tanto lo bueno como lo malo de la cámara. Español"
     print(RS)
     pyperclip.copy(RS)
 
