@@ -25,7 +25,7 @@ menu.add_cascade(label="Nicho", menu=subMenu)
 #Función para el botón de características
 def Características():
     R = Cámara.get()
-    RR = f"Actúa como un experto en fotografía. Dime la Resolución/ISO, el Sensor, los puntos d'enfoque, el estabilizador, el Video, la conectividad, el Visor, las dimensiones i Peso, la Batería (mAh) i la Resistencia de la cámara. Español" + R
+    RR = f"Actúa como un experto en fotografía. Dime la Resolución/ISO, el Sensor, los puntos d'enfoque, el estabilizador, el Video, la conectividad, el Visor, las dimensiones i Peso, la Batería (mAh) i la Resistencia de la cámara. " + R + ". En español"
     print(RR)
     pyperclip.copy(RR)
 
