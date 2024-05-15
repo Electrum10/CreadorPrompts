@@ -7,7 +7,6 @@ from tkinter import messagebox
 #Fondo
 Fondo = "#9b9b9b"
 
-
 #Configuración básica
 ventana = Tk()
 ventana.geometry("600x600")
@@ -15,15 +14,17 @@ ventana.title("Automatizador de prompts")
 ventana.configure(background = Fondo)
 
 
+#Funciones para el menu
+def camara ():
+    Cosa = "Camara"
+
 #Declaramos menú
 menu = tk.Menu(ventana)
 ventana.config(menu=menu)
 
-
-
 #Configuramos categoria de menú
 NichoMenu = tk.Menu(menu, tearoff=False)
-NichoMenu.add_command(label= "Cámaras")
+NichoMenu.add_command(label= "Cámaras", command = camara)
 NichoMenu.add_command(label= "Objetivos")
 NichoMenu.add_separator()
 NichoMenu.add_command(label= "Sillas Gamers")
@@ -32,7 +33,6 @@ NichoMenu.add_command(label= "Teclados Gamers")
 
 AcercaDeMenu = tk.Menu(menu, tearoff=0)
 AcercaDeMenu.add_command(label="si")
-
 
 #Asignamos menú
 menu.add_cascade(label="Nicho", menu=NichoMenu)
