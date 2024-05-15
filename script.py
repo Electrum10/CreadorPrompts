@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import *
 from tkinter.font import Font
 import pyperclip
+from tkinter import messagebox
 
 #Fondo
 Fondo = "#9b9b9b"
@@ -12,6 +13,14 @@ ventana = Tk()
 ventana.geometry("600x600")
 ventana.title("Automatizador de prompts")
 ventana.configure(background = Fondo)
+
+#Declaramos menú
+menu = tk.Menu(ventana)
+ventana.config(menu=menu)
+
+#Declaramos submenú
+subMenu = tk.Menu(menu)
+menu.add_cascade(label="Nicho", menu=subMenu)
 
 #Función para el botón de características
 def Características():
