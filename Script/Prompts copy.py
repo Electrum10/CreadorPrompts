@@ -82,7 +82,8 @@ Titulo.place(x=70, y=30)
 Contexto = tk.Label(ventana, text="Pequeño programa para acelerar mis prompts para mi pagina web", font = FuenteContexto, background=Fondo).place(x = 120, y = 83)
 
 #Botones para abrir las ventanas
-BotónAbrirFotos = tk.Button(ventana, text = "Fotos", command=Fotografia).place(x=200, y=200)
+BotónAbrirCamara = tk.Button(ventana, text = "Fotos", command=Fotografia, width = 20, height = 3).place(x=280, y=200)
+BotónAbrirEditores = tk.Button(ventana, text = "Fotos", command=Fotografia, width = 20, height = 3).place(x=280, y=250)
 
 
 
