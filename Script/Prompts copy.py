@@ -58,6 +58,7 @@ ventana.configure(background = "#9b9b9b")
 FuenteTitulo = Font(family = "Montserrat", size = 27, weight = "bold")
 FuenteContexto = Font(family = "Montserrat", size = 9, weight = "bold")
 Fondo = "#9b9b9b"
+FuenteBotón = Font(family = "Montserrat", size = 14, weight = "bold")
 
 #Declaramos menú
 menu = tk.Menu(ventana)
@@ -82,8 +83,8 @@ Titulo.place(x=70, y=30)
 Contexto = tk.Label(ventana, text="Pequeño programa para acelerar mis prompts para mi pagina web", font = FuenteContexto, background=Fondo).place(x = 120, y = 83)
 
 #Botones para abrir las ventanas
-BotónAbrirCamara = tk.Button(ventana, text = "Fotos", command=Fotografia, width = 20, height = 3).place(x=280, y=200)
-BotónAbrirEditores = tk.Button(ventana, text = "Fotos", command=Fotografia, width = 20, height = 3).place(x=280, y=250)
+BotónAbrirCamara = tk.Button(ventana, text = "Fotos", command=Fotografia, width = 10, height = 2, font = FuenteBotón).place(x=40, y=160)
+BotónAbrirEditores = tk.Button(ventana, text = "Editores", command=Fotografia, width = 10, height = 2, font = FuenteBotón).place(x=230, y=160)
 
 
 
