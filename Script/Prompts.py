@@ -20,7 +20,7 @@ ventana.configure(background = Fondo)
 menu = tk.Menu(ventana)
 ventana.config(menu=menu)
 
-#Configuramos categoria de menú
+#Configuramos categoría de menú
 NichoMenu = tk.Menu(menu, tearoff=False)
 NichoMenu.add_command(label= "Cámaras")
 NichoMenu.add_command(label= "Objetivos")
