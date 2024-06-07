@@ -34,6 +34,7 @@ def Fotografia():
     FuenteBotón = Font(family = "Montserrat", size = 16, weight = "bold")
     FuenteCámara = Font(family = "Montserrat", size = 10, weight = "bold")
     FuenteTexto = Font(family = "Montserrat", size = 15, weight = "bold")
+    FuenteCerrar = Font(family = "Montserrat", size = 9, weight = "bold")
 
     #Entrada para poner la cámara
     Objeto = tk.Entry(ventana_fotografia, width = 30, font = FuenteCámara).place(x = 180, y = 150)
@@ -45,7 +46,7 @@ def Fotografia():
     CaracterísticasBotón = tk.Button(ventana_fotografia, text = "Características", background = "blue", width = 20, height = 3, font= FuenteBotón, command= Características).place(x = 150, y = 200)
     AtributosBotón = tk.Button(ventana_fotografia, text = "Atributos", background = "pink", width = 20, height = 3, font= FuenteBotón, command= Atributos).place(x = 150, y = 320)
     ProsContrasBotón = tk.Button(ventana_fotografia, text = "Pros/contras", background = "yellow", width = 20, height = 3, font= FuenteBotón, command= ProsContras).place(x = 150, y = 450)
-    CerrarMenuFotos = tk.Button(ventana_fotografia, text= "Cerrar", command=ventana_fotografia.destroy).place(x=470, y=300)
+    CerrarMenuFotos = tk.Button(ventana_fotografia, text= "Cerrar", command=ventana_fotografia.destroy, font=FuenteCerrar,width = 10, height = 3).place(x=470, y=300)
 
 
 #Configuración básica de la ventana principal
@@ -57,8 +58,10 @@ ventana.configure(background = "#9b9b9b")
 #Variables básicas
 FuenteTitulo = Font(family = "Montserrat", size = 27, weight = "bold")
 FuenteContexto = Font(family = "Montserrat", size = 9, weight = "bold")
-Fondo = "#9b9b9b"
 FuenteBotón = Font(family = "Montserrat", size = 14, weight = "bold")
+FuenteSubmenú = Font(family = "Montserrat", size = 17, weight = "bold")
+Fondo = "#9b9b9b"
+
 
 #Declaramos menú
 menu = tk.Menu(ventana)
@@ -78,14 +81,17 @@ menu.add_cascade(label="Nicho", menu=NichoMenu)
 menu.add_cascade(label= "Creador", menu=AcercaDeMenu)
 
 #Titulo y contexto
-Titulo = tk.Label(ventana, font=FuenteTitulo, text="Automatizador de prompts", background = Fondo)
-Titulo.place(x=70, y=30)
+Titulo = tk.Label(ventana, font=FuenteTitulo, text="Automatizador de prompts", background = Fondo).place(x=70, y=30)
 Contexto = tk.Label(ventana, text="Pequeño programa para acelerar mis prompts para mi pagina web", font = FuenteContexto, background=Fondo).place(x = 120, y = 83)
+FotografiaNicho = tk.Label(ventana, text="Fotografia", font=FuenteSubmenú, bg=Fondo).place(x=250, y = 120)
 
 #Botones para abrir las ventanas
-BotónAbrirCamara = tk.Button(ventana, text = "Fotos", command=Fotografia, width = 10, height = 2, font = FuenteBotón).place(x=40, y=160)
-BotónAbrirEditores = tk.Button(ventana, text = "Editores", command=Fotografia, width = 10, height = 2, font = FuenteBotón).place(x=230, y=160)
-
+BotónAbrirCamara = tk.Button(ventana, text = "Fotos", command=Fotografia, width = 10, height = 2, font = FuenteBotón)
+BotónAbrirCamara.place(x=40, y=170)
+BotónAbrirEditores = tk.Button(ventana, text = "Editores", width = 10, height = 2, font = FuenteBotón)
+BotónAbrirEditores.place(x=230, y=170)
+BotónAbrirObjetivos = tk.Button(ventana, text = "Objetivos", width = 10, height = 2, font = FuenteBotón)
+BotónAbrirObjetivos.place(x=420, y=170)
 
 
 #Mainloop ;-)
