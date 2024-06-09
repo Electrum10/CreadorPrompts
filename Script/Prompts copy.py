@@ -3,6 +3,16 @@ from tkinter import *
 from tkinter.font import Font
 import pyperclip
 from tkinter import messagebox
+import webbrowser
+
+def Créditos():
+    webbrowser.open("https://github.com/Electrum10")
+
+def gaming():
+    webbrowser.open("https://60hercios.com/")
+    
+def OberturaVisual():
+    webbrowser.open("https://oberturavisual.com/")
 
 def Fotografia():
     ventana_fotografia = tk.Frame(ventana, bg= "lightblue", bd=2, relief="raised")
@@ -33,14 +43,16 @@ def Fotografia():
     #Fuentes
     FuenteBotón = Font(family = "Montserrat", size = 16, weight = "bold")
     FuenteCámara = Font(family = "Montserrat", size = 10, weight = "bold")
-    FuenteTexto = Font(family = "Montserrat", size = 15, weight = "bold")
+    FuenteTexto = Font(family = "Montserrat", size = 40, weight = "bold")
+    FuenteSubtexto = Font(family = "Montserrat", size = 13, weight = "normal")
     FuenteCerrar = Font(family = "Montserrat", size = 9, weight = "bold")
 
     #Entrada para poner la cámara
     Objeto = tk.Entry(ventana_fotografia, width = 30, font = FuenteCámara).place(x = 180, y = 150)
 
     #Titulo para saber donde poner la Camara
-    CámaraTitulo = tk.Label(ventana_fotografia, font=FuenteTexto, text="Cámara:", background = "lightblue").place(x = 250, y = 115)
+    CámaraTitulo = tk.Label(ventana_fotografia, font=FuenteTexto, text="Cámaras", background = "lightblue").place(x = 180, y = 35)
+    CámaraSubtitulo = tk.Label(ventana_fotografia, font=FuenteSubtexto, text="Pon la cámara con la que quieras hacer una reseña:", background = "lightblue").place(x = 104, y = 108)
 
     #Botón para las características
     CaracterísticasBotón = tk.Button(ventana_fotografia, text = "Características", background = "blue", width = 20, height = 3, font= FuenteBotón, command= Características).place(x = 150, y = 200)
@@ -68,17 +80,26 @@ menu = tk.Menu(ventana)
 ventana.config(menu=menu)
 #Configuramos categoría de menú
 NichoMenu = tk.Menu(menu, tearoff=False)
-NichoMenu.add_command(label= "Cámaras")
+AcercaDeMenu = tk.Menu(menu, tearoff=0)
+PaginasWebMenu = tk.Menu(menu, tearoff=False)
+#Botones de menú
+NichoMenu.add_command(label= "Cámaras", command=Fotografia)
 NichoMenu.add_command(label= "Objetivos")
 NichoMenu.add_separator()
 NichoMenu.add_command(label= "Sillas Gamers")
 NichoMenu.add_command(label= "Ratones Gamers")
 NichoMenu.add_command(label= "Teclados Gamers")
-AcercaDeMenu = tk.Menu(menu, tearoff=0)
-AcercaDeMenu.add_command(label="si")
+
+AcercaDeMenu.add_command(label="GitHub", command=Créditos)
+
+PaginasWebMenu.add_command(label="60Hercios (Gaming i Tecnología)", command=gaming)
+PaginasWebMenu.add_command(label="OberturaVisual (Mundo de la fotografia)", command=OberturaVisual)
+
 #Asignamos menú
 menu.add_cascade(label="Nicho", menu=NichoMenu)
 menu.add_cascade(label= "Creador", menu=AcercaDeMenu)
+menu.add_cascade(label="Mis Paginas web", menu=PaginasWebMenu)
+
 
 #Titulo y contexto
 Titulo = tk.Label(ventana, font=FuenteTitulo, text="Automatizador de prompts", background = Fondo).place(x=70, y=30)
