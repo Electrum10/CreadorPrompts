@@ -48,7 +48,8 @@ def Fotografia():
     FuenteCerrar = Font(family = "Montserrat", size = 9, weight = "bold")
 
     #Entrada para poner la cámara
-    Objeto = tk.Entry(ventana_fotografia, width = 30, font = FuenteCámara).place(x = 180, y = 150)
+    Objeto = tk.Entry(ventana_fotografia, width = 30, font = FuenteCámara)
+    Objeto.place(x = 180, y = 150)
 
     #Titulo para saber donde poner la Camara
     CámaraTitulo = tk.Label(ventana_fotografia, font=FuenteTexto, text="Cámaras", background = "lightblue").place(x = 180, y = 35)
@@ -59,6 +60,54 @@ def Fotografia():
     AtributosBotón = tk.Button(ventana_fotografia, text = "Atributos", background = "pink", width = 20, height = 3, font= FuenteBotón, command= Atributos).place(x = 150, y = 320)
     ProsContrasBotón = tk.Button(ventana_fotografia, text = "Pros/contras", background = "yellow", width = 20, height = 3, font= FuenteBotón, command= ProsContras).place(x = 150, y = 450)
     CerrarMenuFotos = tk.Button(ventana_fotografia, text= "Cerrar", command=ventana_fotografia.destroy, font=FuenteCerrar,width = 10, height = 3).place(x=470, y=300)
+
+def Editores():
+    ventana_editores = tk.Frame(ventana, bg= "lightblue", bd=2, relief="raised")
+    ventana_editores.place(x=10, y=10, width=580, height=580)
+    Fondo = "#9b9b9b"
+    
+    #Función para el botón de características
+    def Características():
+        R = Objeto.get()
+        RR = f"Actúa como un experto en fotografía. Dime si se puede trabajar con capas, Si se pueden usar mascaras, si hay filtros y efectos, si se pueden editar las curvas y colores, si tiene IA, si se pueden editar fotos RAW, si soporta l'uso de presets y si tiene soporte para plugins de este editor de fotografías:  " + R + ". En catalán"
+        print(RR)
+        pyperclip.copy(RR)
+
+    #Función para el botón de atributos
+    def Atributos():
+        R = Objeto.get()
+        RS = f"Actúa como un experto en fotografía. Dime los siguientes atributos del editor de fotografia  " + R + ": Precio, Facilidad de uso y rendimiento/potencia. Hazlo en catalán"
+        print(RS)
+        pyperclip.copy(RS)
+
+
+    def ProsContras():
+        R = Objeto.get()
+        RS = f"Actúa como un experto en fotografía. Dime los pros y los contras del editor de fotografías " + R + ", pero haz unos pros y contras que demuestren tanto lo bueno como lo malo del editor. Hazlo en catalán"
+        print(RS)
+        pyperclip.copy(RS)
+
+    #Fuentes
+    FuenteBotón = Font(family = "Montserrat", size = 16, weight = "bold")
+    FuenteCámara = Font(family = "Montserrat", size = 10, weight = "bold")
+    FuenteTexto = Font(family = "Montserrat", size = 40, weight = "bold")
+    FuenteSubtexto = Font(family = "Montserrat", size = 13, weight = "normal")
+    FuenteCerrar = Font(family = "Montserrat", size = 9, weight = "bold")
+
+    #Entrada para poner la cámara
+    Objeto = tk.Entry(ventana_editores, width = 30, font = FuenteCámara)
+    Objeto.place(x = 180, y = 150)
+
+    #Titulo para saber donde poner la Camara
+    EditorTitulo = tk.Label(ventana_editores, font=FuenteTexto, text="Editores", background = "lightblue").place(x = 180, y = 35)
+    EditorSubtitulo = tk.Label(ventana_editores, font=FuenteSubtexto, text="Pon el editor que quieras hacer una reseña:", background = "lightblue").place(x = 124, y = 108)
+
+    #Botón para las características
+    CaracterísticasBotón = tk.Button(ventana_editores, text = "Características", background = "blue", width = 20, height = 3, font= FuenteBotón, command= Características).place(x = 150, y = 200)
+    AtributosBotón = tk.Button(ventana_editores, text = "Atributos", background = "pink", width = 20, height = 3, font= FuenteBotón, command= Atributos).place(x = 150, y = 320)
+    ProsContrasBotón = tk.Button(ventana_editores, text = "Pros/contras", background = "yellow", width = 20, height = 3, font= FuenteBotón, command= ProsContras).place(x = 150, y = 450)
+    CerrarMenuFotos = tk.Button(ventana_editores, text= "Cerrar", command=ventana_editores.destroy, font=FuenteCerrar,width = 10, height = 3).place(x=470, y=300)
+
 
 
 #Configuración básica de la ventana principal
@@ -109,7 +158,7 @@ FotografiaNicho = tk.Label(ventana, text="Fotografia", font=FuenteSubmenú, bg=F
 #Botones para abrir las ventanas
 BotónAbrirCamara = tk.Button(ventana, text = "Fotos", command=Fotografia, width = 10, height = 2, font = FuenteBotón)
 BotónAbrirCamara.place(x=40, y=170)
-BotónAbrirEditores = tk.Button(ventana, text = "Editores", width = 10, height = 2, font = FuenteBotón)
+BotónAbrirEditores = tk.Button(ventana, text = "Editores", command=Editores, width = 10, height = 2, font = FuenteBotón)
 BotónAbrirEditores.place(x=230, y=170)
 BotónAbrirObjetivos = tk.Button(ventana, text = "Objetivos", width = 10, height = 2, font = FuenteBotón)
 BotónAbrirObjetivos.place(x=420, y=170)
