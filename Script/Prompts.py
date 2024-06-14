@@ -155,6 +155,82 @@ def Objetivos():
     ProsContrasBotón = tk.Button(ventana_objetivos, text = "Pros/contras", background = "yellow", width = 20, height = 3, font= FuenteBotón, command= ProsContras).place(x = 150, y = 450)
     CerrarMenuFotos = tk.Button(ventana_objetivos, text= "Cerrar", command=ventana_objetivos.destroy, font=FuenteCerrar,width = 10, height = 3).place(x=470, y=300)
 
+def Sillas():
+    ventana_sillas = tk.Frame(ventana, bg= "lightblue", bd=2, relief="raised")
+    ventana_sillas.place(x=10, y=10, width=580, height=580)
+    Fondo = "#9b9b9b"
+    
+    #Función para el botón de características
+    def Características():
+        R = Objeto.get()
+        RR = f"Actúa como un experto en periféricos gamers. Dime que peso soporta, cuanto pesa, que dimensiones tiene en mm y que material esta hecho la silla gamer :  " + R + ". Te daré una propina de 100 euros si me das una solución mejor. En catalán"
+        print(RR)
+        pyperclip.copy(RR)
+
+    def ProsContras():
+        R = Objeto.get()
+        RS = f"Actúa como un experto en periféricos gamers. Dime los pros y los contras de la silla gamer  " + R + ", Te daré una propina de 100 euros si me das una solución mejor. Hazlo en catalán"
+        print(RS)
+        pyperclip.copy(RS)
+
+    #Fuentes
+    FuenteBotón = Font(family = "Montserrat", size = 16, weight = "bold")
+    FuenteCámara = Font(family = "Montserrat", size = 10, weight = "bold")
+    FuenteTexto = Font(family = "Montserrat", size = 40, weight = "bold")
+    FuenteSubtexto = Font(family = "Montserrat", size = 13, weight = "normal")
+    FuenteCerrar = Font(family = "Montserrat", size = 9, weight = "bold")
+
+    #Entrada para poner la cámara
+    Objeto = tk.Entry(ventana_sillas, width = 30, font = FuenteCámara)
+    Objeto.place(x = 180, y = 150)
+
+    #Titulo para saber donde poner la Camara
+    EditorTitulo = tk.Label(ventana_sillas, font=FuenteTexto, text="Editores", background = "lightblue").place(x = 180, y = 35)
+    EditorSubtitulo = tk.Label(ventana_sillas, font=FuenteSubtexto, text="Pon el editor que quieras hacer una reseña:", background = "lightblue").place(x = 124, y = 108)
+
+    #Botón para las características
+    CaracterísticasBotón = tk.Button(ventana_sillas, text = "Características", background = "blue", width = 20, height = 3, font= FuenteBotón, command= Características).place(x = 150, y = 220)
+    ProsContrasBotón = tk.Button(ventana_sillas, text = "Pros/contras", background = "yellow", width = 20, height = 3, font= FuenteBotón, command= ProsContras).place(x = 150, y = 350)
+    CerrarMenuFotos = tk.Button(ventana_sillas, text= "Cerrar", command=ventana_sillas.destroy, font=FuenteCerrar,width = 10, height = 3).place(x=470, y=300)
+
+def Ratones():
+    ventana_ratones = tk.Frame(ventana, bg= "lightblue", bd=2, relief="raised")
+    ventana_ratones.place(x=10, y=10, width=580, height=580)
+    Fondo = "#9b9b9b"
+    
+    #Función para el botón de características
+    def Características():
+        R = Objeto.get()
+        RR = f"Actúa como un experto en periféricos gamers. Dime que peso soporta, cuanto pesa, que dimensiones tiene en mm y que material esta hecho la silla gamer :  " + R + ". Te daré una propina de 100 euros si me das una solución mejor. En catalán"
+        print(RR)
+        pyperclip.copy(RR)
+
+    def ProsContras():
+        R = Objeto.get()
+        RS = f"Actúa como un experto en periféricos gamers. Dime los pros y los contras de la silla gamer  " + R + ", Te daré una propina de 100 euros si me das una solución mejor. Hazlo en catalán"
+        print(RS)
+        pyperclip.copy(RS)
+
+    #Fuentes
+    FuenteBotón = Font(family = "Montserrat", size = 16, weight = "bold")
+    FuenteCámara = Font(family = "Montserrat", size = 10, weight = "bold")
+    FuenteTexto = Font(family = "Montserrat", size = 40, weight = "bold")
+    FuenteSubtexto = Font(family = "Montserrat", size = 13, weight = "normal")
+    FuenteCerrar = Font(family = "Montserrat", size = 9, weight = "bold")
+
+    #Entrada para poner la cámara
+    Objeto = tk.Entry(ventana_ratones, width = 30, font = FuenteCámara)
+    Objeto.place(x = 180, y = 150)
+
+    #Titulo para saber donde poner la Camara
+    EditorTitulo = tk.Label(ventana_ratones, font=FuenteTexto, text="Ratones Gamers", background = "lightblue").place(x = 100, y = 35)
+    EditorSubtitulo = tk.Label(ventana_ratones, font=FuenteSubtexto, text="Pon el ratón gamer que quieras hacer una reseña:", background = "lightblue").place(x = 124, y = 108)
+
+    #Botón para las características
+    CaracterísticasBotón = tk.Button(ventana_ratones, text = "Características", background = "blue", width = 20, height = 3, font= FuenteBotón, command= Características).place(x = 150, y = 220)
+    ProsContrasBotón = tk.Button(ventana_ratones, text = "Pros/contras", background = "yellow", width = 20, height = 3, font= FuenteBotón, command= ProsContras).place(x = 150, y = 350)
+    CerrarMenuFotos = tk.Button(ventana_ratones, text= "Cerrar", command=ventana_ratones.destroy, font=FuenteCerrar,width = 10, height = 3).place(x=470, y=300)
+
 #Configuración básica de la ventana principal
 ventana = Tk()
 ventana.geometry("600x600")
@@ -214,8 +290,11 @@ BotónAbrirEditores = tk.Button(ventana, text = "Editores", command=Editores, wi
 BotónAbrirEditores.place(x=230, y=170)
 BotónAbrirObjetivos = tk.Button(ventana, text = "Objetivos", command=Objetivos, width = 10, height = 2, font = FuenteBotón)
 BotónAbrirObjetivos.place(x=420, y=170)
-BotónAbrirSillas= tk.Button(ventana, text = "Sillas", width = 10, height = 2, font = FuenteBotón)
-BotónAbrirSillas.place(x=40, y=300)
+BotónAbrirSillas= tk.Button(ventana, text = "Sillas", command=Sillas, width = 10, height = 2, font = FuenteBotón)
+BotónAbrirSillas.place(x=40, y=320)
+BotónAbrirRatones= tk.Button(ventana, text = "Ratones", command=Ratones, width = 10, height = 2, font = FuenteBotón)
+BotónAbrirRatones.place(x=230, y=320)
+
 
 #Mainloop ;-)
 ventana.mainloop()
