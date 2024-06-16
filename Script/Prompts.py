@@ -185,8 +185,8 @@ def Sillas():
     Objeto.place(x = 180, y = 150)
 
     #Titulo para saber donde poner la Camara
-    EditorTitulo = tk.Label(ventana_sillas, font=FuenteTexto, text="Editores", background = "lightblue").place(x = 180, y = 35)
-    EditorSubtitulo = tk.Label(ventana_sillas, font=FuenteSubtexto, text="Pon el editor que quieras hacer una reseña:", background = "lightblue").place(x = 124, y = 108)
+    EditorTitulo = tk.Label(ventana_sillas, font=FuenteTexto, text="Sillas", background = "lightblue").place(x = 230, y = 35)
+    EditorSubtitulo = tk.Label(ventana_sillas, font=FuenteSubtexto, text="Pon la silla que quieras hacer una reseña:", background = "lightblue").place(x = 124, y = 108)
 
     #Botón para las características
     CaracterísticasBotón = tk.Button(ventana_sillas, text = "Características", background = "blue", width = 20, height = 3, font= FuenteBotón, command= Características).place(x = 150, y = 220)
